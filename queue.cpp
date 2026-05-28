@@ -12,7 +12,7 @@ public:
         FRONT = -1;
         REAR = -1;
     }
-    
+
     void insert()
     {
         int num;
@@ -20,4 +20,13 @@ public:
         cout << "Enter a number : ";
         cin >> num;
         cout << endl;
+
+         // cek apakah antrian penuh
+        if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1))
+        {
+            cout << "Queue overflow";
+            return;
+        }
+
+       
 };
