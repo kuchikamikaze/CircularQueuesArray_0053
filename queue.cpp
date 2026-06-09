@@ -1,3 +1,37 @@
+
+/**
+ * @mainpage Documentation Circular Queues
+ * 
+ * @section Introduction
+ * Project ini merupakan project struktur data 
+ * menggunakan stuktur data queues dengan pendekatan circular
+ * 
+ * @section Operations
+ * Project ini memiliki beberapa operasi antara lain:
+ * 1. Insert
+ * 2. Delete
+ * 3. Display
+ * 
+ * @section Cara Penggunaan
+ * Berikut beberapa menu yang bisa digunakan:
+ * 1. en queue
+ * 2. de queue
+ * 3. display
+ * 4. exit
+ * 
+ * @author Profil
+ * - nama : Naufal Arif Athallah
+ * - nim  : 20250140053
+ * - kelas: B
+ * 
+ * @brief 
+ * @version 1.0
+ * @date 2026-06-09
+ * 
+ * * @copyright naufal.arif.ft25@mail.umy.ac.id (c) 2026
+ */
+
+
 #include <iostream>
 using namespace std;
 
