@@ -28,28 +28,44 @@
  * @version 1.0
  * @date 2026-06-09
  * 
- * * @copyright naufal.arif.ft25@mail.umy.ac.id (c) 2026
+ * @copyright naufal.arif.ft25@mail.umy.ac.id (c) 2026
  */
 
 
 #include <iostream>
 using namespace std;
+/**
+ * @class Queues
+ * @brief class ini untuk operasi lengkap queues
+ * 
+ * 
+ */
 
 class Queues{
 private:
-    static const int max = 3;
-    int FRONT, REAR;
-    int queue_array[max];
+    static const int max = 3;///< variabel untuk menyimpan ukuran maximum antrian
+    int FRONT; ///< variable private FRONT untuk menyimpan posisi depan antrian
+    int REAR; ///< variabel private REAR untuk menyimpan posisi velakang antrian
+    int queue_array[max]; ///< variabel private queue_array untuk menyimpan elemen antrian
 public:
+/**
+ * @brief Construct a new Queues object
+ * set default queues null
+ * with front = -1 and rear = -1
+ */
     Queues()
     {
         FRONT = -1;
         REAR = -1;
     }
+/**
+ * @brief methode untuk memasukan data dalam antrian
+ * data dimasukan dalam variabel queue_array
+ */
 
     void insert()
     {
-        int num;
+        int num; ///< variabel num untuk menyimpan nilai
 
         cout << "Enter a number : ";
         cin >> num;
@@ -80,6 +96,10 @@ public:
 
         queue_array[REAR] = num;
     }
+/**
+ * @brief method untuk menghapus data dalam antrian
+ * data dihapus dari dalam variabel queue_array
+ */
 
     void remove()
     {
@@ -110,11 +130,14 @@ public:
                 FRONT = FRONT + 1;
         }
     }
-
+/**
+ * @brief method untuk menampilkan data dalam antrian
+ * data ditampilkan yang berada dalam variable queue_array
+ */
     void display()
     {
-        int FRONT_Position = FRONT;
-        int REAR_Position = REAR;
+        int FRONT_Position = FRONT; ///< variabel front_position untuk menandakan elemen pertama pada variabel front
+        int REAR_Position = REAR; ///< variabel rear_position untuk menandakan elemen terakhir pada variabel rear
 
         // cek apakah antrian kosong
         if (FRONT_Position == -1)
@@ -160,10 +183,16 @@ public:
     }
 };
 
+/**
+ * @brief method utama untuk menjalankan program
+ * 
+ * @return int 
+ */
+
 int main()
 {
-    Queues q;
-    char ch;
+    Queues q; ///< objek untuk menggunakan member yang ada pada class Queues
+    char ch; ///< variabel ch untuk menyimpan pilihan pada menu yang diberikan
 
     while (true)
     {
